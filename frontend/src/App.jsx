@@ -12,6 +12,12 @@ import { Provider } from 'react-redux'
 import appStore from './components/utils/appStore'
 import Wishlist from './pages/Wishlist.jsx'
 import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
+import Contactus from './pages/contactus.jsx'
+import Footer from './pages/Footer.jsx'
+import TermsAndConditions from './pages/TermsAndConditions.jsx'
+import CancellationAndRefundPolicy from './pages/CancellationAndRefundPolicy.jsx'
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
 const App = () => {
    // is key 
   // return auth?<Outlet/>:<Navigate to="/signup"/>
@@ -67,13 +73,40 @@ const App = () => {
     {
       path:"/rent",
       element : <Page3/> 
-    } 
+    },
+    {
+      path:"/about-us",
+      element : <About/> 
+    },
+    {
+      path:"/contact-us",
+      element : <Contactus/> 
+    },
+    {
+      path:"/refund",
+      element : <CancellationAndRefundPolicy/> 
+    },
+    {
+      path:"/privacy-policy",
+      element : <PrivacyPolicy/> 
+    },
+    {
+      path:"/terms&conditions",
+      element : <TermsAndConditions/> 
+    }
+  
+  
+  
   
   ])
   return (
     <div>
          <Provider store={appStore}>
          <RouterProvider router={appRouter}/>
+         
+
+        <Footer/>
+
          </Provider>
     </div>
   )
